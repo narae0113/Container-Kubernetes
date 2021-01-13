@@ -850,6 +850,46 @@ status:
 > * パンギョリージョン：2020年12月29日以降に作成したクラスター
 > * 坪村リージョン：2020年12月24日以降に作成したクラスター
 
+### 承認コントローラー(admission controller)プラグイン
+承認コントローラーはKubernetes APIサーバーリクエストを奪ってオブジェクトを変更したり、リクエストを拒否できます。承認コントローラーの詳細は[承認コントローラー](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/)を参照してください。また承認コントローラーの使用例は[承認コントローラーガイド](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/)を参照してください。
+
+クラスター作成時点によって承認コントローラーに適用されるプラグインの種類が異なります。詳細な内容はリージョン別作成時点に応じたプラグインリストを参照してください。
+
+#### パンギョリージョン2021年1月25日以前に作成したクラスターおよび坪村リージョン2021年1月20日以前に作成したクラスター
+
+* DefaultStorageClass
+* DefaultTolerationSeconds
+* LimitRanger
+* MutatingAdmissionWebhook
+* NamespaceLifecycle
+* NodeRestriction
+* PersistentVolumeClaimResize
+* Priority
+* ResourceQuota
+* RuntimeClass
+* ServiceAccount
+* StorageObjectInUseProtection
+* TaintNodesByCondition
+* ValidatingAdmissionWebhook
+
+#### パンギョリージョン2021年1月26日以降に作成したクラスターおよび坪村リージョン2021年1月21日以降に作成したクラスター
+
+* DefaultStorageClass
+* DefaultTolerationSeconds
+* LimitRanger
+* MutatingAdmissionWebhook
+* NamespaceLifecycle
+* NodeRestriction
+* PersistentVolumeClaimResize
+* PodSecurityPolicy(新規追加)
+* Priority
+* ResourceQuota
+* RuntimeClass
+* ServiceAccount
+* StorageObjectInUseProtection
+* TaintNodesByCondition
+* ValidatingAdmissionWebhook
+
 ## LoadBalancerサービス
 Kubernetesアプリケーションの基本実行単位Podは、CNI(Container Network Interface)でクラスターネットワークに接続されます。基本的にクラスターの外部からPodにはアクセスできません。Podのサービスをクラスターの外部に公開するにはKubernetesの`LoadBalancer`サービス(Service)オブジェクト(object)を利用して外部に公開するパスを作成する必要があります。LoadBalancerサービスオブジェクトを作成すると、クラスターの外部にTOAST Load Balancerが作成され、サービスオブジェクトと接続されます。
 
