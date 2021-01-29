@@ -861,7 +861,7 @@ status:
 
 클러스터 생성 시점에 따라 승인 컨트롤러에 적용되는 플러그인의 종류가 다릅니다. 자세한 내용은 리전별 생성 시점에 따른 플러그인 목록을 참고하세요.
 
-#### 판교 리전 2021년 1월 25일 이전에 생성한 클러스터 및 평촌 리전 2021년 1월 20일 이전에 생성한 클러스터
+#### 판교 리전 2021년 2월 22일 이전에 생성한 클러스터 및 평촌 리전 2021년 2월 17일 이전에 생성한 클러스터
 
 * DefaultStorageClass
 * DefaultTolerationSeconds
@@ -878,7 +878,7 @@ status:
 * TaintNodesByCondition
 * ValidatingAdmissionWebhook
 
-#### 판교 리전 2021년 1월 26일 이후에 생성한 클러스터 및 평촌 리전 2021년 1월 21일 이후에 생성한 클러스터
+#### 판교 리전 2021년 2월 23일 이후에 생성한 클러스터 및 평촌 리전 2021년 2월 18일 이후에 생성한 클러스터
 
 * DefaultStorageClass
 * DefaultTolerationSeconds
